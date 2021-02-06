@@ -26,7 +26,6 @@ jobs:
           cd ~/TaskAction
           npm install
       - name: '运行 【步步宝2】'
-        if: env.XP_iboxpayHEADER
         run: |
           cd ~/TaskAction
           node workflow/BBB2.js
