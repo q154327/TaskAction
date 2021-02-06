@@ -13,6 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        bbb_ck: ${{ secrets.bbb_ck }}
     steps:
       - name: Checkout
         run: |
@@ -22,10 +24,12 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
+        if: bbb_ck
         run: |
           cd ~/TaskAction
           npm install
       - name: '运行 【步步宝2】'
+        if: bbb_ck
         run: |
           cd ~/TaskAction
           node workflow/BBB2.js
