@@ -35,7 +35,7 @@ jobs:
         if: env.XP_iboxpayHEADER
         run: |
           cd ~/TaskAction
-          node workflows/iboxpay.js
+          node workflow/iboxpay.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
