@@ -98,7 +98,7 @@ let livecs = 0,
     liveIdcd = 0;
 RT = 30000;
 const iboxpayheaderArr = [];
-let iboxpayheaderVal = ``;
+let iboxpayheaderVal = `{"Accept": "*/*","Accept-Encoding": "br, gzip, deflate","Accept-Language": "zh-Hans-CN;q=1, en-CN;q=0.9","Connection": "keep-alive","Content-Type": "application/json; charset=utf-8","Host": "veishop.iboxpay.com","User-Agent": "VeiShop, 1.4.6 (iOS, 12.4.8, zh_CN, Apple, iPhone, D3A3C072-BCB1-450E-B631-17CB87F56D48)","X-User-Agent": "VeiShop, 1.4.6 (iOS, 12.4.8, zh_CN, Apple, iPhone, D3A3C072-BCB1-450E-B631-17CB87F56D48)","mchtNo": "100529600058887","shopkeeperId": "1148855820752977920","source": "VEISHOP_APP_IOS","token": "2c4afe2c05c641ceb8bad4f21e4a00f5","traceid": "313583112111364505601612682273970000000000000","version": "1.4.6",}`;
 let middleiboxpayHEADER = [];
 const refreshtokenArr = [];
 let refreshtokenVal = ``;
