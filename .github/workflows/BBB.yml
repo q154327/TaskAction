@@ -31,9 +31,3 @@ jobs:
           node workflow/BBB.js
         env:
           TZ: Asia/shanghai
-          HSURL: ${{ secrets.HSURL }}
-          HSHEADER: ${{ secrets.HSHEADER }}
-          HSBODY: ${{ secrets.HSBODY }}
-          PLAYURL: ${{ secrets.PLAYURL }}
-          PLAYHEADER: ${{ secrets.PLAYHEADER }}
-          PLAYBODY: ${{ secrets.PLAYBODY }}
