@@ -31,8 +31,8 @@ jobs:
       - name: '运行 【步步宝】'
         if: env.BBB_CK
         run: |
-          cd ~/TaskAction/workflow
-          node BBB.js
+          cd ~/TaskAction
+          node workflow/BBB.js
         env:
           TZ: Asia/shanghai
           BBB_CK: ${{ secrets.BBB_CK }}
