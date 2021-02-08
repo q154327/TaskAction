@@ -26,7 +26,8 @@ jobs:
       - name: npm install
         if: env.BBB_CK
         run: |
-          cd ~/TaskAction	        	        
+          cd ~/TaskAction
+          git checkout master	        	        
           npm install
       - name: '运行 【步步宝】'
         if: env.BBB_CK
