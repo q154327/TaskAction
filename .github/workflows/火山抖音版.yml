@@ -6,7 +6,7 @@ name: 抖音火山
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 */6 * * *'
+    - cron: '0 */6 * * *'
   watch:
     types: started
 jobs:
@@ -14,12 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        HSURL: ${{ secrets.HSURL }}
-        HSHEADER: ${{ secrets.HSHEADER }}
-        HSBODY: ${{ secrets.HSBODY }}
-        PLAYURL: ${{ secrets.PLAYURL }}
-        PLAYHEADER: ${{ secrets.PLAYHEADER }}
-        PLAYBODY: ${{ secrets.PLAYBODY }}
+       HSHEADER: ${{ secrets.HSHEADER }}
+       HSBODY: ${{ secrets.HSBODY }}
+       PLAYURL: ${{ secrets.PLAYURL }}
+       PLAYHEADER: ${{ secrets.PLAYHEADER }}
+       PLAYBODY: ${{ secrets.PLAYBODY }}
     steps:
       - name: Checkout
         run: |
@@ -31,16 +30,15 @@ jobs:
       - name: npm install
         if: env.HSHEADER
         run: |
-          cd ~/TaskAction
+          cd ~/TaskAction	        	        
           npm install
-      - name: '运行 【抖音火山】'
+      - name: '运行 【火山】'
         if: env.HSHEADER
         run: |
           cd ~/TaskAction
-          node workflows/huoshan.js
+          node workflow/huoshan.js
         env:
-          
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          TZ: Asia/shanghai
           HSURL: ${{ secrets.HSURL }}
           HSHEADER: ${{ secrets.HSHEADER }}
           HSBODY: ${{ secrets.HSBODY }}
