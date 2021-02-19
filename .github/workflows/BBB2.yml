@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.YOUTH_HEADER
+        if: env.BBB_CK2
         run: |
           npm install
       - name: '运行 【步步宝2】'
