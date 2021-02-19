@@ -6,30 +6,28 @@ name: 步步宝2
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/30 * * * *'
+    - cron: '0,30 * * * *'
   watch:
     types: started
-
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
-    env:
-        BBB_CK2: ${{ secrets.BBB_CK2 }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        run: |
+          git clone https://github.com/q154327/TaskAction.git ~/TaskAction
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: npm install
-        if: env.BBB_CK2
         run: |
+          cd ~/TaskAction       	        
           npm install
       - name: '运行 【步步宝2】'
-        if: env.BBB_CK2
         run: |
+          cd ~/TaskAction
           node workflow/BBB2.js
         env:
-          BBB_CK2: ${{ secrets.BBB_CK2 }}
+          TZ: Asia/shanghai
