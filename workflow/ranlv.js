@@ -95,10 +95,9 @@ if ($.isNode()) {
 //   rlurlArr.push($.getdata(`rlurl${i}`))
 //    rlheaderArr.push($.getdata(`rlheader${i}`))
 //    rlbodyArr.push($.getdata(`rlbody${i}`))
-	 rlurl = process.env.RLURL.split('\n')
-	 rlheader = process.env.RLHEADER.split('\n')
-	 
-  }
+//}
+     rlurl = process.env.RLURL.split('\n')
+     rlheader = process.env.RLHEADER.split('\n')
 }
 !(async () => {
 if (!rlheaderArr[0] &&  !rlurlArr[0]) {
