@@ -33,5 +33,3 @@ jobs:
           node workflow/BBB2.js
         env:
           BBB_CK2: ${{ secrets.BBB_CK2 }}
-        env:
-          YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
