@@ -92,15 +92,15 @@ if ($.isNode()) {
 //    rlbodyArr.push($.getdata('rlbody'))
 //    let rlcount = ($.getval('rlcount') || '1');
 //  for (let i = 2; i <= rlcount; i++) {
-//   rlurlArr.push($.getdata(`rlurl${i}`))
+//    rlurlArr.push($.getdata(`rlurl${i}`))
 //    rlheaderArr.push($.getdata(`rlheader${i}`))
 //    rlbodyArr.push($.getdata(`rlbody${i}`))
-//}
-     rlurl = process.env.RLURL.split('\n')
-     rlheader = process.env.RLHEADER.split('\n')
+	rlurl = process.env.RLURL.split('\n')
+	rlheader = process.env.RLHEADER.split('\n')
+  }
 }
 !(async () => {
-if (!rlheaderArr[0] &&  !rlurlArr[0]) {
+if (!rlheaderArr[0] && !rlbodyArr[0] && !rlurlArr[0]) {
     $.msg($.name, '【提示】请先获取燃旅视频一cookie')
     return;
   }
