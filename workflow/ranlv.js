@@ -98,10 +98,10 @@ if ($.isNode()) {
   }
 }
 !(async () => {
-if (!rlheaderArr[0] && !rlurlArr[0]) {
-    $.msg($.name, '【提示】请先获取燃旅视频一cookie')
-    return;
-  }
+//if (!rlheaderArr[0] &&!rlbodyArr[0] &&  !rlurlArr[0]) {
+//    $.msg($.name, '【提示】请先获取燃旅视频一cookie')
+//    return;
+//  }
    console.log(`------------- 共${rlheaderArr.length}个账号----------------\n`)
   for (let i = 0; i < rlheaderArr.length; i++) {
     if (rlheaderArr[i]) {
