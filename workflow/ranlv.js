@@ -54,7 +54,7 @@ if (isGetCookie) {
    $.done()
 } 
 if ($.isNode()) {
-
+/*
    if (process.env.RLURL && process.env.RLURL.indexOf('#') > -1) {
    rlurl = process.env.RLURL.split('#');
    console.log(`您选择的是用"#"隔开\n`)
@@ -85,19 +85,12 @@ if ($.isNode()) {
   } else {
    rlbody = [process.env.RLBODY]
   };
- 
-	//rlurlArr.push('access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=199053&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTM3MzU4NzYsImV4cCI6MzIyNzQ3MTc1MiwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTkwNTMsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzc3OTIzNjA0NSIsIm1vYmlsZSI6IjE1MzgxOTg5MTEzIn19.GEvgkDucxuLeGcgDBstPwP6IzcMBx8ScIo17AOTfec0&video_id=29473')
-   	//rlheaderArr.push('{"Accept": "*/*","Accept-Encoding": "br, gzip, deflate","Accept-Language": "zh-Hans-CN;q=1, en-CN;q=0.9","Connection": "keep-alive","Content-Length": "0","Cookie": "view_27086=27086; acw_tc=3a31c12a16137358690044359e0da7d0626f2a1c12166957f403eeb673","Host": "ranlv.lvfacn.com","User-Agent": "ran lu shi pin/1.0.49 (iPhone; iOS 12.4.8; Scale/3.00)"}')
+*/
+	rlurlArr.push('access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=199053&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTM3MzU4NzYsImV4cCI6MzIyNzQ3MTc1MiwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTkwNTMsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzc3OTIzNjA0NSIsIm1vYmlsZSI6IjE1MzgxOTg5MTEzIn19.GEvgkDucxuLeGcgDBstPwP6IzcMBx8ScIo17AOTfec0&video_id=29473')
+   	rlheaderArr.push('{"Accept": "*/*","Accept-Encoding": "br, gzip, deflate","Accept-Language": "zh-Hans-CN;q=1, en-CN;q=0.9","Connection": "keep-alive","Content-Length": "0","Cookie": "view_27086=27086; acw_tc=3a31c12a16137358690044359e0da7d0626f2a1c12166957f403eeb673","Host": "ranlv.lvfacn.com","User-Agent": "ran lu shi pin/1.0.49 (iPhone; iOS 12.4.8; Scale/3.00)"}')
     console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
     console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
-} else if(!$.isNode()&&rlheader.indexOf("#")>-1){
-   rlurl = rlurl.split("\n")
-   rlheader = rlheader.split("\n")
-   rlbody = rlbody.split("\n")
-			
-	
-	
-/* } else {
+ } else {
     rlbodyArr.push($.getdata('rlbody'))
     let rlcount = ($.getval('rlcount') || '1');
   for (let i = 2; i <= rlcount; i++) {
@@ -105,7 +98,6 @@ if ($.isNode()) {
     rlheaderArr.push($.getdata(`rlheader${i}`))
     rlbodyArr.push($.getdata(`rlbody${i}`))
   }
-  */
 }
 !(async () => {
 if (!rlheaderArr[0] && !rlurlArr[0]) {
