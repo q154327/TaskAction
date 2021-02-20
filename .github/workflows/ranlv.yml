@@ -18,9 +18,6 @@ jobs:
         RLURL: ${{ secrets.RLURL }}
         RLHEADER: ${{ secrets.RLHEADER }}
         RLBODY: ${{ secrets.RLBODY }}
-        RLURL1: ${{ secrets.RLURL1 }}
-        RLHEADER1: ${{ secrets.RLHEADER1 }}
-        RLBODY1: ${{ secrets.RLBODY1 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -32,7 +29,7 @@ jobs:
         run: |
           npm install
           
-      - name: '运行 【燃旅视频1】'
+      - name: '运行 【燃旅视频】'
         if: env.RLHEADER
         run: |
           node workflow/ranlv.js
@@ -40,14 +37,4 @@ jobs:
           RLURL: ${{ secrets.RLURL }}
           RLHEADER: ${{ secrets.RLHEADER }}
           RLBODY: ${{ secrets.RLBODY }}
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          
-      - name: '运行 【燃旅视频2】'
-        if: env.RLHEADER1
-        run: |
-          node workflow/ranlv.js
-        env:
-          RLURL: ${{ secrets.RLURL1 }}
-          RLHEADER: ${{ secrets.RLHEADER1 }}
-          RLBODY: ${{ secrets.RLBODY1 }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
