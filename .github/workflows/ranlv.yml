@@ -15,11 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        //账号1
         RLURL: ${{ secrets.RLURL }}
         RLHEADER: ${{ secrets.RLHEADER }}
         RLBODY: ${{ secrets.RLBODY }}
-        //账号2
         RLURL1: ${{ secrets.RLURL1 }}
         RLHEADER1: ${{ secrets.RLHEADER1 }}
         RLBODY1: ${{ secrets.RLBODY1 }}
@@ -44,7 +42,7 @@ jobs:
           RLBODY: ${{ secrets.RLBODY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           
-        - name: '运行 【燃旅视频2】'
+      - name: '运行 【燃旅视频2】'
         if: env.RLHEADER1
         run: |
           node workflow/ranlv.js
