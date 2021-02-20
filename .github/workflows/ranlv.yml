@@ -15,9 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
+        //账号1
         RLURL: ${{ secrets.RLURL }}
         RLHEADER: ${{ secrets.RLHEADER }}
         RLBODY: ${{ secrets.RLBODY }}
+        //账号2
+        RLURL1: ${{ secrets.RLURL1 }}
+        RLHEADER1: ${{ secrets.RLHEADER1 }}
+        RLBODY1: ${{ secrets.RLBODY1 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -26,10 +31,10 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.RLHEADER
         run: |
           npm install
-      - name: '运行 【燃旅视频】'
+          
+      - name: '运行 【燃旅视频1】'
         if: env.RLHEADER
         run: |
           node workflow/ranlv.js
@@ -37,18 +42,14 @@ jobs:
           RLURL: ${{ secrets.RLURL }}
           RLHEADER: ${{ secrets.RLHEADER }}
           RLBODY: ${{ secrets.RLBODY }}
-          PUSH_KEY: ${{ secrets.PUSH_KEY}}
-          BARK_PUSH: ${{ secrets.BARK_PUSH}}
-          BARK_SOUND: ${{ secrets.BARK_SOUND}}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN}}
-          TG_USER_ID: ${{ secrets.TG_USER_ID}}
-          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN}}
-          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET}}
-          QYWX_KEY: ${{ secrets.QYWX_KEY}}
-          IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY}}
-          QQ_SKEY: ${{ secrets.QQ_SKEY}}
-          QQ_MODE: ${{ secrets.QQ_MODE}}
-          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN}}
-          PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER}}
-          TG_PROXY_HOST: ${{ secrets.TG_PROXY_HOST}}
-          TG_PROXY_PORT: ${{ secrets.TG_PROXY_PORT}}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          
+        - name: '运行 【燃旅视频2】'
+        if: env.RLHEADER1
+        run: |
+          node workflow/ranlv.js
+        env:
+          RLURL: ${{ secrets.RLURL1 }}
+          RLHEADER: ${{ secrets.RLHEADER1 }}
+          RLBODY: ${{ secrets.RLBODY1 }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
