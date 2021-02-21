@@ -59,7 +59,7 @@ hostname = ymz.iphonezhuan.com
 */
 const $ = new Env('羊毛赚');
 //let ymzurl = $.getdata('ymzurl')
-let ymzurl = '"http://ymz.iphonezhuan.com/addaction"'
+let ymzurl = 'http://ymz.iphonezhuan.com/addaction'
 //let ymzhd = $.getdata('ymzhd')
 let ymzhd ='{"Accept":"*/*","Accept-Encoding":"gzip, deflate","Accept-Language":"zh-cn","Connection":"close","Content-Length":"82","Content-Type":"application/x-www-form-urlencoded","Host":"ymz.iphonezhuan.com","User-Agent":"%E7%BE%8A%E6%AF%9B%E8%8B%B1%E6%B1%89%E8%AF%8D%E5%85%B8/1.03 CFNetwork/978.0.7 Darwin/18.7.0"}'
 //let ymzurl1 = $.getdata('ymzurl1')
@@ -71,7 +71,7 @@ let ymzbody1 = 'sign=f05045a6a48ecbec8ebb04ad679aea05&channelID=2&taskid=2&type=
 //let ymzbody2 = $.getdata('ymzbody2')
 !(async () => {
   if (typeof $request !== "undefined") {
-    await ymzck()
+    //await ymzck()
    
   } else {
     for (let i = 0; i < 6; i++) {
