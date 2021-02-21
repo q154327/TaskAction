@@ -59,9 +59,9 @@ hostname = ymz.iphonezhuan.com
 */
 const $ = new Env('羊毛赚');
 //let ymzurl = $.getdata('ymzurl')
-let ymzurl = '\"http://ymz.iphonezhuan.com/addaction\"'
+let ymzurl = '"http://ymz.iphonezhuan.com/addaction"'
 //let ymzhd = $.getdata('ymzhd')
-let ymzhd ='{\"Accept\":\"*/*\",\"Accept-Encoding\":\"gzip, deflate\",\"Accept-Language\":\"zh-cn\",\"Connection\":\"close\",\"Content-Length\":\"82\",\"Content-Type\":\"application/x-www-form-urlencoded\",\"Host\":\"ymz.iphonezhuan.com\",\"User-Agent\":\"%E7%BE%8A%E6%AF%9B%E8%8B%B1%E6%B1%89%E8%AF%8D%E5%85%B8/1.03 CFNetwork/978.0.7 Darwin/18.7.0\"}' 
+let ymzhd ='{"Accept":"*/*","Accept-Encoding":"gzip, deflate","Accept-Language":"zh-cn","Connection":"close","Content-Length":"82","Content-Type":"application/x-www-form-urlencoded","Host":"ymz.iphonezhuan.com","User-Agent":"%E7%BE%8A%E6%AF%9B%E8%8B%B1%E6%B1%89%E8%AF%8D%E5%85%B8/1.03 CFNetwork/978.0.7 Darwin/18.7.0"}'
 //let ymzurl1 = $.getdata('ymzurl1')
 //let ymzhd1 = $.getdata('ymzhd1')
 //let ymzbody = $.getdata('ymzbody')
@@ -77,8 +77,8 @@ let ymzbody1 = 'sign=f05045a6a48ecbec8ebb04ad679aea05&channelID=2&taskid=2&type=
     for (let i = 0; i < 6; i++) {
       $.index = i + 1
       console.log(`\n羊毛赚开始执行第${i+1}组任务！💦\n等待一分钟开始执行下一组任务`)
-    await ymzqd();
-await $.wait(60000);
+      await ymzqd();
+      await $.wait(60000);
  // }
 $.msg("","","羊毛赚任务已全部完成！")
   }
