@@ -77,7 +77,7 @@ let ymzbody1 = 'sign=f05045a6a48ecbec8ebb04ad679aea05&channelID=2&taskid=2&type=
     for (let i = 0; i < 6; i++) {
       $.index = i + 1
       console.log(`\n羊毛赚开始执行第${i+1}组任务！💦\n等待一分钟开始执行下一组任务`)
-    //await ymzqd();
+    await ymzqd();
 await $.wait(60000);
   }
 $.msg("","","羊毛赚任务已全部完成！")
