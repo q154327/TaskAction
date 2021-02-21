@@ -70,16 +70,16 @@ let ymzbody = 'sign=a2a884ef2b010f7a545e9790e1de5b01&channelID=2&taskid=1&type=1
 let ymzbody1 = 'sign=f05045a6a48ecbec8ebb04ad679aea05&channelID=2&taskid=2&type=2&uid=9417&ver=102'
 //let ymzbody2 = $.getdata('ymzbody2')
 !(async () => {
-  if (typeof $request !== "undefined") {
-    await ymzck()
+ // if (typeof $request !== "undefined") {
+ //   await ymzck()
    
-  } else {
+ // } else {
     for (let i = 0; i < 6; i++) {
       $.index = i + 1
       console.log(`\n羊毛赚开始执行第${i+1}组任务！💦\n等待一分钟开始执行下一组任务`)
     await ymzqd();
 await $.wait(60000);
-  }
+ // }
 $.msg("","","羊毛赚任务已全部完成！")
   }
 })()
