@@ -67,7 +67,11 @@ let ymzbody1 = $.getdata('ymzbody1')
 let ymzbody2 = $.getdata('ymzbody2')
 !(async () => {
   if (typeof $request !== "undefined") {
-    await ymzck()
+    ymzurl = 'http://ymz.iphonezhuan.com/addaction'
+	  ymzhd = '{"Accept":"*/*","Accept-Encoding":"gzip, deflate","Connection":"keep-alive","Content-Type":"application/x-www-form-urlencoded","Host":"ymz.iphonezhuan.com","User-Agent":"%E7%BE%8A%E6%AF%9B%E8%8B%B1%E6%B1%89%E8%AF%8D%E5%85%B8/1.03 CFNetwork/978.0.7 Darwin/18.7.0","Content-Length":"82","Accept-Language":"zh-cn"}'
+	  ymzbody = 'sign=a2a884ef2b010f7a545e9790e1de5b01&channelID=2&taskid=1&type=1&uid=9417&ver=102'
+	  ymzbody1 = 'sign=f05045a6a48ecbec8ebb04ad679aea05&channelID=2&taskid=2&type=2&uid=9417&ver=102'
+	  //await ymzck()
    
   } else {
     for (let i = 0; i < 6; i++) {
