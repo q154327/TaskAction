@@ -4,11 +4,9 @@ TG频道地址  https://t.me/ziyescript
 TG交流群   https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
 boxjs链接  https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/ziye.boxjs.json
 转载请备注个名字，谢谢
-
 ⚠️笑谱
 脚本运行一次   
 则运行6次视频 1次金蛋 1次直播（直播默认关闭，且在8点到23点有效）
-
 1.15 调整金蛋延迟为60秒
 1.17 增加ck失效提醒，以及金币满额停止
 1.27 笑谱恢复，活动id284
@@ -44,68 +42,37 @@ boxjs链接  https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThx
 3.5 设置888由上至下循环提现
 3.8 替换为循环获取ck
 3.9 因视频功能无效，故取消视频，默认开启直播
-
 ⚠️一共1个位置 1个ck  👉 5条 Secrets 
 多账号换行
-
-
 ⚠️方法一
-
 第一步 进入笑谱 选择手机号登陆，输入手机号，点击获取验证码
-
 第二步 ⚠️进入boxjs（其他平台则输入对应环境变量）  输入当前账号序号   输入手机号  和  验证码
-
 第三步 运行js  手机则自动获取token（其他平台则复制token，填写环境变量）  然后回到boxjs 修改验证码为0
-
-
 已全部操作完成
-
-
 ⚠️方法二
-
 第一步 添加  hostname=veishop.iboxpay.com,
-
 第二步 ⚠️添加笑谱获取更新TOKEN重写  
-
 登录笑谱(在登录状态就退出，重新登录)  获取更新TOKEN
-
-
-
 refreshtokenVal 👉XP_refreshTOKEN
-
 设置任务 可设置 0 1 2    0开视频关直播 1开视频开直播 2关视频开直播
  LIVE  👉  XP_live
-
 设置提现金额 可设置 0 1 15 30 50 100 888 默认0关闭  设置888由上至下循环提现
 CASH  👉  XP_CASH 
-
 设置手机号 
  phone  👉  XP_phone
-
 设置验证码   默认0关闭获取token功能
 sms  👉  XP_sms
-
 ⚠️主机名以及重写👇
-
 （手机可以获取refreshTOKEN     其他开启抓包，然后登录笑谱，找到 https://veishop.iboxpay.com/nf_gateway/nf-user-auth-web/ignore_tk/veishop/v1/ 里的响应体 refreshTOKEN）
-
 hostname=veishop.iboxpay.com
-
 ############## 圈x
-
 #笑谱获取更新TOKEN
 https:\/\/veishop\.iboxpay\.com\/nf_gateway\/nf-user-auth-web\/ignore_tk\/veishop\/v1\/* url script-response-body https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/iboxpay.js
-
 ############## loon
 http-response https:\/\/veishop\.iboxpay\.com\/nf_gateway\/nf-user-auth-web\/ignore_tk\/veishop\/v1\/* script-path=https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/iboxpay.js, requires-body=1,max-size=0, tag=笑普token
-
 ############## surge
-
 #笑谱获取更新TOKEN
 笑谱获取更新TOKEN = type=http-response,pattern=https:\/\/veishop\.iboxpay\.com\/nf_gateway\/nf-user-auth-web\/ignore_tk\/veishop\/v1\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/iboxpay.js
-
-
-
 */
 GXRZ = '3.9 因视频功能无效， 故取消视频， 默认开启直播'
 const $ = Env("笑谱");
@@ -437,10 +404,8 @@ async function all() {
         }
         /*
                 if (LIVE != 2 && $.splimit.data.isUperLimit == false || LIVE == 888) {
-
                     await playo(); //播放o       
                     await videoo(); //视频o
-
                     if (LIVES != 2) {
                         await $.wait(30000)
                         tt = CS * 30 - 29
@@ -454,10 +419,7 @@ async function all() {
                         if ($.video.data && $.video.data.goldCoinNumber != 0 && videoPublishId6) {
                             await goldvideo(); //金蛋视频
                         }
-
-
                     }
-
                 }
         */
 
