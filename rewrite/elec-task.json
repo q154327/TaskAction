@@ -1,0 +1,125 @@
+{
+  "name": "elecV2P 定时任务订阅",
+  "author": "留个名字",
+  "desc": "xx 导出的任务订阅。该订阅适用于 elecV2P，与其他软件并不兼容。相关说明参考：https://github.com/elecV2/elecV2P-dei/tree/master/docs/06-task.md",
+  "date": "2021-04-02 10:25:12",
+  "list": [
+    {
+      "name": "番茄看看",
+      "type": "cron",
+      "time": "29 10,12,14,16,18,20,22 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/fqkk.js"
+      }
+    },
+    {
+      "name": "清空日志",
+      "type": "cron",
+      "time": "59 23 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/deletelog.js"
+      }
+    },
+    {
+      "name": "云扫码",
+      "type": "cron",
+      "time": "3 12,14,16,18,20,22 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/ysm.js"
+      }
+    },
+    {
+      "name": "一加盲盒",
+      "type": "cron",
+      "time": "11 12 17-30 3 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/i-chenzhe/qx/main/z_oneplus.js"
+      }
+    },
+    {
+      "name": "京东联想集卡活动",
+      "type": "cron",
+      "time": "12 15 15-29 3 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/i-chenzhe/qx/main/z_lenovo.js"
+      }
+    },
+    {
+      "name": "京东城城分现金（被助力很难）",
+      "type": "cron",
+      "time": "12 0 19-24 3 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/i-chenzhe/qx/main/z_city_cash.js"
+      }
+    },
+    {
+      "name": "悬赏喵喵",
+      "type": "cron",
+      "time": "15 */3 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/xsmm.js"
+      }
+    },
+    {
+      "name": "66阅读",
+      "type": "cron",
+      "time": "28,58 9-22 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/66yd.js"
+      }
+    },
+    {
+      "name": "文创阅读",
+      "type": "cron",
+      "time": "11 9-22 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/wcyd.js"
+      }
+    },
+    {
+      "name": "朗果英语",
+      "type": "cron",
+      "time": "10-15 9 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/lgyy.js"
+      }
+    },
+    {
+      "name": "西梅",
+      "type": "cron",
+      "time": "20 10,18 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/ximei.js"
+      }
+    },
+    {
+      "name": "春风转",
+      "type": "cron",
+      "time": "15,45 10-21 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/cfz.js"
+      }
+    },
+    {
+      "name": "最强蜗牛",
+      "type": "cron",
+      "time": "40 8,15 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/zqwn.js"
+      }
+    }
+  ]
+}
