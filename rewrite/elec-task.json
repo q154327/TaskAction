@@ -1,6 +1,6 @@
 {
-  "name": "elecV2P 定时任务订阅",
-  "author": "留个名字",
+  "name": "七叔 elecV2P 定时任务订阅",
+  "author": "七叔",
   "desc": "xx 导出的任务订阅。该订阅适用于 elecV2P，与其他软件并不兼容。相关说明参考：https://github.com/elecV2/elecV2P-dei/tree/master/docs/06-task.md",
   "date": "2021-04-02 10:25:12",
   "list": [
