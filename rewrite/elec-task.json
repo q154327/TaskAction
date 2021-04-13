@@ -32,33 +32,6 @@
       }
     },
     {
-      "name": "一加盲盒",
-      "type": "cron",
-      "time": "11 12 17-30 3 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/i-chenzhe/qx/main/z_oneplus.js"
-      }
-    },
-    {
-      "name": "京东联想集卡活动",
-      "type": "cron",
-      "time": "12 15 15-29 3 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/i-chenzhe/qx/main/z_lenovo.js"
-      }
-    },
-    {
-      "name": "京东城城分现金（被助力很难）",
-      "type": "cron",
-      "time": "12 0 19-24 3 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/i-chenzhe/qx/main/z_city_cash.js"
-      }
-    },
-    {
       "name": "悬赏喵喵",
       "type": "cron",
       "time": "15 */3 * * *",
@@ -95,69 +68,6 @@
       }
     },
     {
-      "name": "京东创维全勤奖(加购)",
-      "type": "cron",
-      "time": "15 08 2-18 4 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/monk/car/monk_skyworth_car.js"
-      }
-    },
-    {
-      "name": "京东小魔方",
-      "type": "cron",
-      "time": "10 10 7-9 4 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/monk/i-chenzhe/z_xmf.js"
-      }
-    },
-    {
-      "name": "京东母婴跳一跳2期",
-      "type": "cron",
-      "time": "5 8,14,20 6-13 4 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/monk/i-chenzhe/z_mother_jump.js"
-      }
-    },
-    {
-      "name": "京东华硕-iqiyi",
-      "type": "cron",
-      "time": "0 0 5-11 4 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/monk-coder/dust/dust/backup/z_asus_iqiyi.js"
-      }
-    },
-    {
-      "name": "京东百变大咖秀",
-      "type": "cron",
-      "time": "10 10,11 * * 2-5",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/i-chenzhe/jd_entertainment.js"
-      }
-    },
-    {
-      "name": "京东乘风破浪的姐姐",
-      "type": "cron",
-      "time": "12 12 24-26 3 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/i-chenzhe/z_sister.js"
-      }
-    },
-    {
-      "name": "京东答题赢京豆",
-      "type": "cron",
-      "time": "5 1 23-25 3 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/i-chenzhe/z_grassy.js"
-      }
-    },
-    {
       "name": "微客众智",
       "type": "cron",
       "time": "25,55 1,4,7,9-22 * * *",
@@ -185,24 +95,6 @@
         "target": "https://raw.githubusercontent.com/age174/-/main/wcyd.js"
       },
       "running": false
-    },
-    {
-      "name": "京东自抓直播雨（配合重写每日获取）",
-      "type": "cron",
-      "time": "1 0,9,11,13,15,17,19,20,21,23 * 4-6 *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/monk/backup/get_red_rain.js"
-      }
-    },
-    {
-      "name": "京东每日红包雨（由我代管随缘维护）",
-      "type": "cron",
-      "time": "1 8-23 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/sngxpro2/jdliveredrain/main/lxk0301_live_redrain.js"
-      }
     },
     {
       "name": "萌喵大作战无限刷",
