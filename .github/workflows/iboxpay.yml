@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        
         XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
         XP_CASH: ${{ secrets.XP_CASH }}
         XP_live: ${{ secrets.XP_live }}
@@ -39,7 +38,11 @@ jobs:
           cd ~/TaskAction
           node workflow/iboxpay.js
         env:
-          
+          XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
+          XP_CASH: ${{ secrets.XP_CASH }}
+          XP_live: ${{ secrets.XP_live }}
+          XP_iboxpayvideoHEADER: ${{ XP_iboxpayvideoHEADER }}
+          XP_iboxpayvideoBODY: ${{ XP_iboxpayvideoBODY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
