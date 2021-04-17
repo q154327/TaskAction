@@ -17,8 +17,8 @@ jobs:
         XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
         XP_CASH: ${{ secrets.XP_CASH }}
         XP_live: ${{ secrets.XP_live }}
-        XP_iboxpayvideoHEADER: ${{ XP_iboxpayvideoHEADER }}
-        XP_iboxpayvideoBODY: ${{ XP_iboxpayvideoBODY }}
+        XP_iboxpayvideoHEADER: ${{ secrets.XP_iboxpayvideoHEADER }}
+        XP_iboxpayvideoBODY: ${{ secrets.XP_iboxpayvideoBODY }}
     steps:
       - name: Checkout
         run: |
@@ -41,8 +41,8 @@ jobs:
           XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
           XP_CASH: ${{ secrets.XP_CASH }}
           XP_live: ${{ secrets.XP_live }}
-          XP_iboxpayvideoHEADER: ${{ XP_iboxpayvideoHEADER }}
-          XP_iboxpayvideoBODY: ${{ XP_iboxpayvideoBODY }}
+          XP_iboxpayvideoHEADER: ${{ secrets.XP_iboxpayvideoHEADER }}
+          XP_iboxpayvideoBODY: ${{ secrets.XP_iboxpayvideoBODY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
