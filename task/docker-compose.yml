@@ -1,0 +1,23 @@
+version: "2.0"
+services:
+  jd1:
+    image: whyour/qinglong:latest
+    container_name: ql1
+    restart: always
+    tty: true
+    network_mode: bridge
+    hostname: ql1
+    volumes:
+      - ./config:/ql/config
+      - ./log:/ql/log
+      - ./repo:/ql/repo
+      - ./db:/ql/db
+      - ./scripts:/ql/scripts
+      - ./jbot:/ql/jbot
+    ports:
+      - 5701:5700
+    environment: 
+      - ENABLE_TTYD=true             
+      - ENABLE_WEB_PANEL=true
+      - ENABLE_HANGUP=true
+      - ENABLE_TG_BOT=true
